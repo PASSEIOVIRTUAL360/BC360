@@ -1,0 +1,17 @@
+#: locale=pt
+
+## Media
+
+### Title
+panorama_2D3D1F32_27C6_9353_41A7_605427BF4A88.label = 01
+panorama_2D3E2C96_27C6_9553_419B_2EC3B40F737C.label = 02
+panorama_2D3E0255_27C6_EDD1_41B8_50682DBFEBE1.label = 03
+panorama_2C824A88_27C6_BD3F_41B2_0C9A215383C4.label = 04
+panorama_2D3FD813_27C6_BD51_41C3_9288472DA3E5.label = 05
+
+## Tour
+
+### Description
+
+### Title
+tour.name = BC360
