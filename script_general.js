@@ -183,10 +183,13 @@ function regTextVar(a, b) {
     function f(k) {
         var l = k['data']['nextSelectedIndex'];
         if (l >= 0x0) {
-            var m = k['source']['get']('items')[l], n = function () {
-                    m['unbind']('begin', n, this), e['call'](this);
-                };
-            m['bind']('begin', n, this);
+            var items = k['source']['get']('items');
+            if (items && l < items['length']) {
+                var m = items[l], n = function () {
+                        m['unbind']('begin', n, this), e['call'](this);
+                    };
+                m['bind']('begin', n, this);
+            }
         }
     }
     function g(k) {
