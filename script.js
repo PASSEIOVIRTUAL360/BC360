@@ -7,11 +7,12 @@ var devicesUrl = {"general":"script_general.js?v=1746769175778","mobile":"script
 
 (function()
 {
-    var deviceType = ['general'];
-    if(TDV.PlayerAPI.mobile)
-        deviceType.unshift('mobile');
-    if(TDV.PlayerAPI.device == TDV.PlayerAPI.DEVICE_IPAD)
-        deviceType.unshift('ipad');
+var deviceType = ['general'];
+var isSmallScreen = window.matchMedia('(max-width: 800px)').matches;
+if (TDV.PlayerAPI.mobile && isSmallScreen)
+    deviceType.unshift('mobile');
+if (TDV.PlayerAPI.device == TDV.PlayerAPI.DEVICE_IPAD && isSmallScreen)
+    deviceType.unshift('ipad');
     var url;
     for(var i=0; i<deviceType.length; ++i) {
         var d = deviceType[i];
